@@ -1,0 +1,511 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+li {
+  list-style: none;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.table li:first-child {
+  text-decoration: underline dotted;
+  margin-right: 100px;
+}
+
+
+.hidden-table {
+  display: flex;
+  width: 500px;
+  border: 2px solid brown;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: -2px;
+  top: 35px;
+  z-index: 100;
+  color: indianred;
+  transform: scale(0);
+  transition: 0.5s;
+
+}
+
+.hidden-table .table {
+  display: flex;
+  flex-direction: column;
+}
+
+header .header-parent nav .links .tab:hover .hidden-table {
+  transform: scale(1);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.header-parent {
+  width: 100vw;
+  margin: 35px 35px 25px 35px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.header-parent h1 {
+  font-family: "Playwrite CL", cursive;
+  font-size: 1.3em;
+}
+
+.header-parent h1 span {
+  color: indianred;
+  font-size: 1.4em;
+}
+
+.header-parent nav ul,
+.header-parent .icons {
+  width: 600px;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+  color: indianred;
+}
+
+nav .links ul .x {
+  padding: 5px 15px;
+  font-weight: 550;
+  position: relative;
+}
+
+nav .links ul .x:hover {
+  border-left: 2px solid brown;
+  border-right: 2px solid brown;
+}
+
+nav .links ul .x::before,
+nav .links ul .x::after {
+  content: "";
+  background-color: brown;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+nav .links ul .x::before {
+  bottom: 0;
+}
+
+nav .links ul .x::after {
+  top: 0;
+}
+
+nav .links ul .x:hover::before {
+  width: 100%;
+}
+
+nav .links ul .x:hover::after {
+  width: 100%;
+
+}
+
+.header-parent .icons {
+  font-size: 1.4em;
+  width: 300px;
+  position: relative;
+
+}
+
+.header-parent .icons .last::after {
+  position: absolute;
+  content: "0";
+  width: 8px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: indianred;
+  font-size: 0.4em;
+  bottom: 0px;
+  padding: 4px;
+  color: white;
+}
+
+/***********************************************************************************/
+/* Main */
+main {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+
+.main-parent {
+  position: relative;
+  display: flex;
+}
+
+.main-text {
+  position: absolute;
+  align-self: center;
+  font-size: 3.7em;
+  line-height: 90px;
+  font-weight: bold;
+  left: 100px;
+  top: 150px;
+  color: brown;
+}
+
+.btn {
+  position: absolute;
+  padding: 7px;
+  color: brown;
+  background-color: white;
+}
+
+.image img {
+  height: 75vh;
+  width: 88vw;
+}
+
+/***********************************************************************************/
+/* Section */
+section {
+  margin-bottom: 50px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.line {
+  top: 50px;
+  position: absolute;
+  height: 2px;
+  width: 10%;
+  background-color: indianred;
+  transition: 0.5s;
+}
+
+.title:hover .line {
+  width: 13%;
+}
+
+.special-category-first {
+  height: 40vh;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.special-category-first img {
+  width: 275px;
+  height: 120%;
+  margin-bottom: 10px;
+}
+
+.item-faint {
+  color: gray;
+  font-size: 1.1em;
+}
+
+.item-info {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.special-category-items {
+  position: relative;
+}
+
+.special-category-items::after {
+  content: ">";
+  font-size: 2em;
+  position: absolute;
+  color: white;
+  width: 0px;
+  height: 0px;
+  background-color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 245px;
+  top: 362px;
+}
+
+.special-category-items:hover::after {
+  width: 30px;
+  height: 30px;
+}
+
+/* First Is Done */
+.special-category-mid {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.marketing {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  background-color: indianred;
+  color: rgb(242, 242, 241);
+}
+
+.marketing .marketing-head {
+  display: flex;
+}
+
+.marketing .marketing-head h2 {
+  font-size: 2em;
+  margin: -10px 0px 20px 10px;
+}
+
+.marketing .marketing-head h2 span {
+  font-size: 0.8em;
+}
+
+.marketing p {
+  font-size: 1.2em;
+  line-height: 22px;
+}
+
+.marketing i {
+  font-size: 3em;
+}
+
+.mid {
+  margin: 0px 15px;
+}
+
+.discount {
+  padding: 10px;
+  background-image: url("../images/stock-photo-the-national-saudi-arabian-dish-chicken-kabsa-with-rice-mandi-2188453117.jpg");
+  background-size: cover;
+  width: 21.2%;
+  color: white;
+  font-size: 1.2em;
+}
+
+.discount p {
+  color: rgb(189, 187, 187);
+}
+
+.discount span {
+  color: white;
+  font-size: 1.4em;
+}
+
+.mid {
+  background-image: url("../images/stock-photo-stir-fry-noodles-with-vegetables-and-shrimps-in-black-bowl-slate-background-top-view-copy-space-1075259726.jpg");
+}
+
+.discount:hover {
+  transform: scale(1.05);
+}
+
+/* Second Is Done */
+.special-category-last {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+.last-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 2px solid rgb(53, 51, 51);
+  padding-left: 50px;
+  font-size: 1.8em;
+  color: indianred;
+  margin: 25px;
+}
+
+.last-icons:first-child {
+  border-left: none;
+}
+
+.heavy-text {
+  font-size: 0.7em;
+  color: black;
+}
+
+.light-text {
+  font-size: 0.6em;
+  color: indianred;
+}
+
+.last-icons .image {
+  width: 100px;
+  height: 80px;
+  background-image: url("../images/icons.png");
+  background-repeat: no-repeat;
+  background-position: center 20px;
+  transition: 0.5s;
+}
+
+.last-icons .x2 {
+  background-position: center -170px;
+}
+
+.last-icons .x3 {
+  background-position: center -350px;
+}
+
+.last-icons .x4 {
+  background-position: center -535px;
+}
+
+.last-icons .x5 {
+  background-position: center -720px;
+}
+
+.last-icons:hover.last-icons .light-text {
+  color: brown;
+}
+
+.last-icons:hover.last-icons .x1 {
+  background-position: center -80px;
+}
+
+.last-icons:hover.last-icons .x2 {
+  background-position: center -260px;
+}
+
+.last-icons:hover.last-icons .x3 {
+  background-position: center -445px;
+}
+
+.last-icons:hover.last-icons .x4 {
+  background-position: center -630px;
+}
+
+.last-icons:hover.last-icons .x5 {
+  background-position: center -820px;
+}
+
+/* Third Is Done */
+.seperator {
+  height: 1px;
+  width: 90%;
+  background-color: indianred;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+/***********************************************************************************/
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.foot-text {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.foot-text p {
+  margin: 20px;
+}
+
+.foot-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(2, 520px);
+  grid-column-gap: 100px;
+  grid-row-gap: 70px;
+}
+
+.foot-item {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 1.5s;
+  width: 100%;
+  height: 85%;
+  margin-bottom: 10px;
+}
+
+.foot-item .front {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/2.jpg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  backface-visibility: hidden;
+}
+
+.foot-item .back {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/1.jpg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.foot-item:hover {
+  transform: rotateY(180deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back i {
+  font-size: 50px;
+  color: white;
+  margin: 5px;
+}
+
+.foot-parent {
+  width: 100%;
+  height: 100%;
+}
+
+.under-item i {
+  color: yellow;
+}
+
+.under-item .l {
+  color: black;
+}
+
+.under-item p {
+  font-size: 1.2em;
+  color: rgb(87, 84, 84);
+  margin: 3px;
+}
+
+.under-item .money {
+  color: black;
+  font-size: 1.4em;
+  font-weight: bold;
+}
